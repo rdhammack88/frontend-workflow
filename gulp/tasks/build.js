@@ -75,7 +75,7 @@ gulp.task("imageOptimize", ['deleteDist'], () => {
             .src([
                 './app/assets/images/**/*',
                 '!./app/assets/images/icons',
-                '!./app/assets/icons/**/*'
+                '!./app/assets/images/icons/**/*'
             ])
             .pipe(imagemin({
                 progressive: true, // JPEG images
@@ -137,6 +137,11 @@ gulp.task('usemin', ['styles', 'scripts'], () => {
                     }
                 ]
             }))
+            .on('error', function (errorInfo) {
+                /** Continue watching for changes regardless of error, and log out the error */
+                console.log(errorInfo); //.toString()
+                this.emit('end');
+            })
             .pipe(gulp.dest('./dist'));
 });
 

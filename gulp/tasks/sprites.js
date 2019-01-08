@@ -104,7 +104,7 @@ gulp.task('copySpriteGraphic', ['createPngCopy',], () => {
  */
 gulp.task('copySpriteCSS', ['createSprite'], () => {
     return gulp.src('./app/temp/sprite/css/*.css')
-        .pipe(rename('_sprite.css'))
+        .pipe(rename('_sprite.scss'))
         .pipe(gulp.dest('./app/assets/styles/modules'));
 });
 

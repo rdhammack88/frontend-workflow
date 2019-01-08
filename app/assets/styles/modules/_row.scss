@@ -1,0 +1,16 @@
+
+.row {
+    float: left;
+    width: 20%;
+
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+
+        h1 {
+            color: red;
+            flex: 1 4 800px;
+        }
+    }
+
+}

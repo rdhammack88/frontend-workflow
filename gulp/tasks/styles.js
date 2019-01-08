@@ -16,7 +16,7 @@ sass.compiler = require('node-sass');
  * Task to run "styles" task
  * No dependencies
  * Output style === compressed
- * Prefix declarations for last 5 browser versions
+ * Prefix declarations for last 10 browser versions
  *
  * @param  {Task Name} 'styles'
  * @param  {callback function}
@@ -30,7 +30,7 @@ gulp.task('styles', () => {
                 outputStyle: 'compressed'
             }))
             .pipe(prefixer({
-                browsers: ['last 5 versions']
+                browsers: ['last 10 versions']
             }))
             .on('error', sass.logError)
             // .pipe(sourcemaps.write())
