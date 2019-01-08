@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 gulp.task('modernizr', () => {
     return gulp
             .src([
-                'pipe./app/assets/styles/**/*.scss',
+                '/app/assets/styles/**/*.scss',
                 './app/assets/scripts/**/*.js'
             ])
             .pipe(modernizr({
