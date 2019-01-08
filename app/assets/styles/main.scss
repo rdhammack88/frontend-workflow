@@ -1,0 +1,12 @@
+$red: #ed3400;
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    color: red;
+    flex: 1 4 800px;
+}
+

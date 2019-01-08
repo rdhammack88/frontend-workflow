@@ -1,0 +1,29 @@
+/* Sprites generated from gulp */
+
+/*
+ * Do NOT edit modules/_sprite directly
+ * as it is generated automatically by Gulp.
+ * Instead edit gulp/templates/sprite.
+*/
+
+{{ #shapes }}
+
+{{ #first }}
+/* All .icon classes based on svg sprite sheet */
+.icon {
+    background-image: url('/assets/images/sprites/{{{ sprite }}}');
+}
+
+/* Using a function to replace svg sprite icon image with a png sprite icon image for legacy browser support */
+.no-svg .icon {
+    background-image: url('/assets/images/sprites/{{#replaceSvgWithPng}}{{{ sprite }}}{{/replaceSvgWithPng}}');
+}
+{{ /first }}
+
+/* Prefixed .icon classes with a base filename */
+.icon--{{ base }} {
+    width: {{ width.outer }}px;
+    height: {{ height.outer }}px;
+    background-position: {{ position.relative.xy }};
+}
+{{ /shapes }}
