@@ -37,7 +37,7 @@
     "gulp-uglify": "3.0.0",
     "gulp-usemin": "0.3.28",
     "gulp-watch": "4.3.11",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "webpack": "^4.28.1",
     "webpack-cli": "^3.1.2"
   }
